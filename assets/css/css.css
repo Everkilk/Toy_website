@@ -2,8 +2,114 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+    font-family: jakarta;
 }
 
-i{
-    height:20px;
+@font-face {
+    font-family: jakarta;
+    src: url(../font/PlusJakartaSans-Regular.ttf);
 }
+
+@font-face {
+    font-family: jakarta;
+    src: url(../font/PlusJakartaSans-Bold.ttf);
+    font-weight: bold;
+}
+
+.container{
+    max-width: 80%!important;
+}
+
+.container .header{
+    height:140px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.container .header .img_home{
+    height:100%;
+    width: max-content;
+}
+
+.container .header .button_container,
+.container .header .button_block{
+    display: flex;
+}
+
+.container .header img{
+    height:100%;
+    width:auto;
+    cursor: pointer;
+}
+
+.container .header form{
+    width:50%;
+}
+
+.header .field{
+    position: relative;
+    display: flex;
+    width:100%;
+}
+
+.header .field input{
+    height:48px;
+    padding:6px 45px 6px 20px;
+    background-color: #ffff;
+    color:#000;
+    border:1px solid #797878;
+    border-radius:35px;
+    font-size: 12px;
+    font-weight: 500;
+    width:100%;
+}
+
+.header .field input:focus{
+    outline: 0;
+}
+
+.header .field label{
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+
+.header .field button{
+    position: absolute;
+    height:100%;
+    width:25px;
+    color:#fff;
+    display: flex;
+    overflow: hidden;
+    right:1rem;
+    top:0;
+    justify-content: center;
+    border:none;
+    background-color: transparent;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button_container{
+    height:20%;
+}
+
+.button_container .button_block {
+    height:100%;
+}
+
+.button_container .button_block:first-child{
+    justify-content: right;
+}
+
+.button_container .button_block p{
+    font-weight: bold;
+    margin-left:10px;
+    font-size:14px;
+    color:#74a607;
+    line-height: 28px;
+}
+
+
+
