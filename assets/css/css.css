@@ -16,33 +16,34 @@
     font-weight: bold;
 }
 
-.container{
+#container{
     max-width: 80%!important;
+    margin:auto;
 }
 
-.container .header{
+#container .header{
     height:140px;
     margin: 0 auto;
     align-items: center;
 }
 
-.container .header .img_home{
+#container .header .img_home{
     height:100%;
     width: max-content;
 }
 
-.container .header .button_container,
-.container .header .button_block{
+#container .header .button_container,
+#container .header .button_block{
     display: flex;
 }
 
-.container .header img{
+#container .header img{
     height:100%;
     width:auto;
     cursor: pointer;
 }
 
-.container .header form{
+#container .header form{
     width:50%;
 }
 
@@ -110,6 +111,122 @@
     color:#74a607;
     line-height: 28px;
 }
+
+#nav{
+    position: relative;
+}
+
+#nav ul{
+    display:flex;
+    width:70%;
+    margin:0 auto;
+    justify-content: space-between;
+    padding:0;
+}
+
+#nav ul li{
+    height: 40px;
+    list-style-type: none;
+}
+
+#nav ul> li> a {
+    text-decoration: none;
+    color:#74a607;
+    font-weight: bold;
+}
+
+#nav ul>li:hover>a{
+    border-bottom:2px solid #201919;
+    padding-bottom:3px;
+}
+
+#nav ul .root:hover>.sub_nav{
+    display: block;
+}
+
+
+#nav .sub_nav{
+    position: absolute;
+    top:2rem;
+    left:0;
+    display: none;
+    height:300px;
+    border:1px solid #cdcdcd;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 4px 5px 13px #636262;
+    width:100%;
+    padding:20px 0;
+}
+
+
+#nav .sub_nav .flex_box{
+    display: flex;
+    height:100%;
+    width:80%;
+    margin:0 auto;
+}
+
+#nav .sub_nav img{
+    height:100%;
+    border-radius:10px;
+}
+
+#nav .sub_nav .flex_box div{
+    margin-left:30px;
+    margin-top:10px;
+}
+
+#nav .sub_nav td{
+    padding:10px 100px 10px 10px;
+}
+
+#nav .sub_nav td a{
+    text-decoration: none;
+    color:#333;
+}
+
+#nav .sub_nav .flex_box h3{
+    margin:0;
+    color:#74a607;
+    font-weight: bold;
+}
+
+.sub_nav .flex_box table td:hover{
+    cursor: pointer;
+}
+
+.sub_nav .flex_box svg{
+    height:15px;
+}
+
+.flex_box table tr td:hover>a{
+    border-bottom:1px solid #333;
+}
+
+.flex_box table .aside_link1:hover>a,
+.flex_box table .aside_link1:hover>svg{
+    border-bottom:1px solid #6638b6;
+}
+
+.flex_box table .aside_link2:hover>a,
+.flex_box table .aside_link2:hover>svg{
+    border-bottom:1px solid #ff6a14;
+}
+
+.flex_box table .aside_link3:hover>a,
+.flex_box table .aside_link3:hover>svg{
+    border-bottom:1px solid #5986d9;
+}
+
+
+
+
+
+
+
+
+.
 
 
 

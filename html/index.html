@@ -13,7 +13,7 @@
     <title>MECHA</title>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <div class="header row">
             <div class="img_home col-3">
                 <img src="../assets/img/MECHA.png" alt="">
@@ -39,30 +39,117 @@
                 </div>
             </div>
         </div>
-        <div class="nav">
+        <div id="nav">
             <ul>
+                <li class="root">
+                    <a href="#">Phim</a>
+                    <div class="sub_nav">
+                        <div class="flex_box">
+                            <img src="../assets/img/nav/gundam.jpg" alt="" id="img_preview1">
+                            <div>
+                                <h3>Phim</h3>
+                                <table>
+                                    <tr>
+                                        <td id="gundam"><a href="#">Gundam</a></td>
+                                        <td><a href="#">8-10 tuổi</a></td>
+                                        <td class="aside_link1">
+                                            <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="transformer" onmouseover="transformer()"><a href="#">Transformer</a></td>
+                                        <td><a href="#">10-16 tuổi</a></td>
+                                        <td class="aside_link2">
+                                            <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="pacificrim" onmouseover="pacificrim()"><a href="#">Pacific Rim</a></td>
+                                        <td><a href="#">Trên 16 tuổi</a></td>
+                                        <td class="aside_link3">
+                                            <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="warhammer" onmouseover="warhammer()"><a href="">Warhammer</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="root">
+                    <a href="#">Giới tính</a>
+                    <div class="sub_nav">
+                        <div class="flex_box">
+                            <img src="../assets/img/nav/nam.jpg" alt="" id="img_preview2">
+                            <div>
+                                <h3>Giới tính</h3>
+                                <table>
+                                    <tr>
+                                        <td id="nam" onmouseover="nam()"><a href="#">Nam</a></td>
+                                        <td><a href="#">8-10 tuổi</a></td>
+                                        <td class="aside_link1">
+                                            <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="nu" onmouseover="nu()"><a href="#">Nữ</a></td>
+                                        <td><a href="#">10-16 tuổi</a></td>
+                                        <td class="aside_link2">
+                                            <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#"></a></td>
+                                        <td><a href="#">Trên 16 tuổi</a></td>
+                                        <td class="aside_link3">
+                                            <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Lego</a>
+                </li>
+                <li>
+                    <a href="#">Robot</a>
+                </li>
                 <li><a href="#">Gundam</a></li>
                 <li><a href="#">Mô hình</a></li>
-                <li><a href="#">Lego</a></li>
-                <li><a href="#">Robot</a></li>
-                <li>
-                    <a href="#">Phim</a>
-                    <ul style="display: none;">
-                        <li><a href="#">Gundam</a></li>
-                        <li><a href="#">Transformer</a></li>
-                        <li><a href="#">Pacific Rim</a></li>
-                        <li><a href="#">Warhammer</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Giới tính</a>
-                    <ul style="display: none;">
-                        <li><a href="#">Nam</a></li>
-                        <li><a href="#">Nữ</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
+    <script>
+        document.getElementById("gundam").onmouseover = function() {gundam()};
+        document.getElementById("transformer").onmouseover = function() {transformer()};
+        document.getElementById("pacificrim").onmouseover = function() {pacificrim()};
+        document.getElementById("warhammer").onmouseover = function() {warhammer()};
+        document.getElementById("nam").onmouseover = function() {nam()};
+        document.getElementById("nu").onmouseover = function() {nu()};
+        var img1 = document.getElementById("img_preview1");
+        var img2 = document.getElementById("img_preview2");
+        function gundam(){
+            img1.src = "../assets/img/nav/gundam.jpg";
+        }
+        function transformer(){
+            img1.src = "../assets/img/nav/transformer.jpg";
+        }
+        function pacificrim(){
+            img1.src = "../assets/img/nav/pacificrim.jpg";
+        }
+        function warhammer(){
+            img1.src = "../assets/img/nav/warhammer.jpg";
+        }
+        function nam(){
+            img2.src = "../assets/img/nav/nam.jpg";
+        }
+        function nu(){
+            img2.src = "../assets/img/nav/nu.jpg";
+        }
+    </script>
 </body>
 </html>
