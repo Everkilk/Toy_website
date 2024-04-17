@@ -159,13 +159,14 @@
     box-shadow: 4px 5px 13px #636262;
     width:100%;
     padding:20px 0;
+    background-color:#fff;
 }
 
 
 #nav .sub_nav .flex_box{
     display: flex;
     height:100%;
-    width:80%;
+    width:90%;
     margin:0 auto;
 }
 
@@ -177,10 +178,15 @@
 #nav .sub_nav .flex_box div{
     margin-left:30px;
     margin-top:10px;
+    width: 60%;
+}
+
+.flex_box div table{
+    width:100%;
 }
 
 #nav .sub_nav td{
-    padding:10px 100px 10px 10px;
+    padding:10px;
 }
 
 #nav .sub_nav td a{
@@ -223,7 +229,10 @@
 
 #carousel{
     z-index: 0;
+<<<<<<< HEAD
     margin-top:10px;
+=======
+>>>>>>> d6ca3c0123c447bfd69ee55bf4df08a983485319
 }
 
 
