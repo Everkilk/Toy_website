@@ -24,19 +24,23 @@
                     <input type="search" placeholder="Bạn muốn tìm món đồ chơi nào ?">
                     <label for="">Bạn muốn tìm món đồ chơi nào ?</label>
                     <button aria-label="Bạn muốn tìm món đồ chơi nào ?">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#74a607" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #74a607;"></i>
                     </button>
                 </div>
             </form>
             <div class="button_container col-4 row">
-                <div class="button_block col">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#74a607" d="M384 64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64l0-384zM128 192a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM80 356.6c0-37.9 30.7-68.6 68.6-68.6h86.9c37.9 0 68.6 30.7 68.6 68.6c0 15.1-12.3 27.4-27.4 27.4H107.4C92.3 384 80 371.7 80 356.6z"/></svg>
-                    <p>Đăng nhập</p>
-                </div>
-                <div class="button_block col">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#74a607" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
-                    <p>Giỏ hàng</p>
-                </div>
+                <a href="#" class="col">
+                    <div class="button_block">
+                        <i class="fa-solid fa-image-portrait fa-xl" style="color: #74a607;"></i>
+                        <p>Đăng nhập</p>
+                    </div>
+                </a>
+                <a href="#" class="col">
+                    <div class="button_block">
+                        <i class="fa-solid fa-cart-shopping fa-xl"  style="color: #74a607;"></i>
+                        <p>Giỏ hàng</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div id="nav">
@@ -144,7 +148,7 @@
               </div>
             </div>
         </div>
-        <div class="catalog_block text-center mt-5 special_block">
+        <div class="catalog_block text-center mt-5 pb-4 special_block">
             <h3 class="mb-4">Danh mục nổi bật</h3>
             <div class="your_product special">
                 <div class="special_catalog  rounded-4 text-center item1">
@@ -245,6 +249,55 @@
         </div>
         <div class="banner mt-5">
             <img src="../assets/img/Contact/Home.png" alt="#" class="img-fluid rounded-2">
+        </div>
+        <div class="offer_block mt-5 row">
+            <div class="offer col text-center">
+                <i class="fa-solid fa-paper-plane"></i>
+                <p class="offer_label">Giao hàng miễn phí</p>
+                <p class="offer_descript">Giao hàng miễn phí trên toàn Việt Nam với những đơn trên 500.000vnd</p>
+            </div>
+            <div class="offer col text-center">
+                <i class="fa-solid fa-shop"></i>
+                <p class="offer_label">Mua sắm mọi lúc</p>
+                <p class="offer_descript">Cửa hàng của chúng tôi luôn mở 24/7 từ Thứ Hai đến Chủ Nhật trừ ngày Lễ</p>
+            </div>
+            <div class="offer col text-center">
+                <i class="fa-solid fa-comments"></i>
+                <p class="offer_label">Liên lạc với chúng tôi</p>
+                <p class="offer_descript">Chúng tôi luôn sẵn sàng hỗ trợ bạn ! Hãy liên lạc với chúng tôi qua mechastore@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer row mt-5">
+            <div class="footer_part col">
+                <h4>ĐIỀU KHOẢN & CHÍNH SÁCH</h4>
+                <ul>
+                    <li><a href="#">Chính sách giao hàng</a></li>
+                    <li><a href="#">Chính sách tích lũy điểm</a></li>
+                    <li><a href="#">Điều khoản điều kiện</a></li>
+                </ul>
+            </div>
+            <div class="footer_part col">
+                <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                <ul>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách bảo hành đổi trả hàng hóa</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                    <li><a href="#">Những câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="footer_part contact_inform col">
+                <h4>LIÊN HỆ</h4>
+                <ul>
+                    <li>Email : <span>hotro@mecha.com.vn</span></li>
+                    <li>Hotline : <span>1900 1912</span></li>
+                    <li>Giờ làm việc : <span>0:00 - 24 : 00</span></li>
+                </ul>
+            </div>
+            <div class="footer_part col">
+                <h4>NHẬN THÔNG TIN KHUYẾN MÃI</h4>
+                <input type="email" class="form-control" placeholder="Email của bạn">
+                <button class="btn" type="button">Nhận thông tin</button>
+            </div>
         </div>
     </div>
     <script>

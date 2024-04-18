@@ -31,7 +31,7 @@
 }
 
 body{
-    background-color: #eceaea;
+    background-color: #fdfdfd!important;
 }
 
 #container{
@@ -86,6 +86,7 @@ body{
 
 .header .field input:focus{
     outline: 0;
+    border:1px solid #74a607;
 }
 
 .header .field label{
@@ -112,15 +113,25 @@ body{
 }
 
 .button_container{
-    height:20%;
+    height:40%;
 }
 
 .button_container .button_block {
     height:100%;
+    align-items: center;
 }
 
-.button_container .button_block:first-child{
+a{
+    text-decoration: none!important;
+}
+
+.button_container .col:first-child .button_block{
     justify-content: right;
+}
+
+.button_container .col{
+    padding:0;
+    margin-right:20px;
 }
 
 .button_container .button_block p{
@@ -368,6 +379,91 @@ body{
     background-color: #74a607;
     color:#fff;
 }
+
+.banner img{
+    width:100%;
+}
+
+.offer_block{
+    margin-left :0 !important;;
+    margin-right: 0!important;
+}
+
+.offer_block i{
+    color:#74a607;
+    font-size: 23px;
+}
+
+.offer_block .offer_label{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.offer_block .offer_descript{
+    width:80%;
+    margin:auto;
+}
+
+.footer .footer_part h4{
+    font-size:18px;
+    font-weight: bold;
+    color:#74a607;
+    margin-bottom:20px;
+}
+
+.footer .footer_part ul{
+    padding:0;
+}
+
+.footer .footer_part ul li{
+    list-style-type: none;
+    padding-bottom:10px;
+    color:#a1a1a1;
+    font-size:14px;
+}
+
+.footer .footer_part ul li a{
+    color:#a1a1a1;
+    font-size:14px;
+    text-decoration: none;
+}
+
+.footer_part ul li:hover a{
+    color:#74a607;
+}
+
+.contact_inform ul li span{
+    font-weight: bold;
+    color: #000!important;;
+}
+
+.footer_part input{
+    border-radius:20px;
+    font-size: 14px;
+    padding:10px 0 10px 20px;
+}
+
+.footer_part input:hover{
+    border:1px solid #74a607;
+}
+
+.footer_part button{
+    border:1px solid #74a607;
+    color:#74a607;
+    margin-top:15px;
+    border-radius:20px;
+    font-size:14px;
+    padding:10px 20px;
+}
+
+.footer_part button:hover{
+    border:1px solid #74a607;
+    color:#fff;
+    background-color: #74a607;
+}
+
+
 
 
 
