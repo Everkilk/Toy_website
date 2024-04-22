@@ -22,16 +22,22 @@
     top: 0;
     bottom: 0;
     position: fixed;
+    z-index: 0;
 }
 
 #container .slide .wallpaper{
-    background-image: url(../img/slide/slide1.jpg);
+    background-image: url(../img/Login_Signup/Slide/slide1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
     height:100%;
     background-position-x: 50%;
     background-position-y: 0;
+}
+
+#container .user_block{
+    z-index: 1;
+    position: relative;
 }
 
 
