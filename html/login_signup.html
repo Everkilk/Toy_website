@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login_signup.css">
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bootstrap/jquery-3.7.1.js"></script>
+    <link href="../assets/icon/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/icon/css/solid.css" rel="stylesheet" />
+    <link href="../assets/icon/css/brands.css" rel="stylesheet" />
+    <title>Tài khoản</title>
+</head>
+<body>
+    <div id="container">
+        <div class="slide">
+            <div class="wallpaper"></div>
+        </div>
+        <!-- Login block -->
+        <div class="user_block" id="login">
+            <div class="block-header">
+                <img src="../assets/img/MECHA.png" alt="#" class="img-fluid">
+            </div>
+            <div class="block-body">
+                <input type="email" class="form-control" placeholder="Email">
+                <input type="password" class="form-control" placeholder="Mật khẩu">
+                <div class="forget_pass">
+                    <button class="btn">Quên mật khẩu?</button>
+                </div>
+                <button class="btn submit_login" type="button">Đăng nhập</button>
+            </div>
+            <div class="block-footer">
+                <button class="btn" data-bs-target="#signup" data-bs-toggle="modal">Đăng ký tài khoản</button>
+            </div>
+        </div>
+        <!-- Signup block -->
+        <div class="user_block" id="signup">
+            <div class="block-header">
+                <img src="../assets/img/MECHA.png" alt="#" class="img-fluid">
+            </div>
+            <div class="block-body">
+                <div class="row">
+                    <div class="col">
+                        <label for="FullName" class="form-label">Họ tên</label>
+                        <input type="text" id="FullName" class="form-control">
+                        <div class="invalid-feedback" id="namefeedback"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="Gender" class="form-label">Giới tính</label>
+                        <div class="gender-checkbox">
+                            <input type="radio" name="gender" id="male" class="form-check-control">
+                            <label for="male" class="form-check-label">Nam</label>
+                            <input type="radio" name="gender" id="female" class="form-check-control">
+                            <label for="female" class="form-check-label">Nữ</label>
+                            <input type="radio" name="gender" id="third-gender" class="form-check-control">
+                            <label for="third-gender" class="form-check-label">Không tiện</label>
+                        </div>
+                        <div class="invalid-feedback" id="sexfeedback"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="age" class="form-label">Ngày sinh</label>
+                        <input type="date" class="form-control" id="age">
+                        <div class="invalid-feedback" id="datefeedback"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="gmail" class="form-label">Gmail</label>
+                        <input type="gmail" class="form-control" id="gmail">
+                        <div class="invalid-feedback" id="emailfeedback"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="password">
+                        <div class="invalid-feedback" id="passfeedback"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="retype-password" class="form-label">Nhập lại mật khẩu</label>
+                        <input type="password" class="form-control" id="retype-password">
+                        <div class="invalid-feedback" id="repassfeedback"></div>
+                    </div>
+                </div>
+                <button class="btn submit_login" type="button" id="login_submit">Đăng ký</button>
+            </div>
+            <div class="block-footer">
+                <button class="btn" data-bs-target="#login" data-bs-toggle="modal">Đăng nhập</button>
+            </div>
+        </div>
+    </div>       
+    <script>
+        $(document).ready(function() {
+            var changeSlideshow = function(){
+                img
+            }
+            $('#login_submit').click(function() {
+            event.preventDefault();
+            var password = $('#password').val();
+            var confirmPassword = $('#retype-password').val();
+            var fullName = $('#FullName').val();
+            var email = $('#gmail').val();
+            //Full name validation
+            if (!fullName || !/^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$/.test(fullName)) {
+                document.getElementById("FullName").style.border="1px solid red";
+                document.getElementById("namefeedback").innerHTML = "Chữ cái đầu phải viết hoa, phải có ít nhất họ và tên.";
+                return;
+            }else{
+                document.getElementById("FullName").style.border="1px solid #dee2e6";
+                document.getElementById("namefeedback").innerHTML = "";
+            }
+
+            // Gender validation
+            if($('input[name="gender"]:checked').length>0){
+                document.getElementById("sexfeedback").innerHTML = "";
+            }else{
+                document.getElementById("sexfeedback").innerHTML = "Chọn ít nhất 1 trong 3";
+                return
+            }
+
+            // Date of birth validation
+            var dob = new Date(document.getElementById('age').value);
+            var today = new Date();
+            var age = today.getFullYear() - dob.getFullYear();
+            var m = today.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+            if (!age || age < 12) {
+                document.getElementById("age").style.border="1px solid red";
+                document.getElementById("datefeedback").innerHTML = "Bạn phải ít nhất 12 tuổi trở lên.";
+                return;
+            }else{
+                document.getElementById("age").style.border="1px solid #dee2e6";
+                document.getElementById("datefeedback").innerHTML = "";
+            }
+
+            // Email validation
+            if(!email || !/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email)){
+                document.getElementById("gmail").style.border="1px solid red";
+                document.getElementById("emailfeedback").innerHTML = "Không được để trống, phải đúng định dạng email";
+                return;
+            }else{
+                document.getElementById("gmail").style.border="1px solid #dee2e6";
+                document.getElementById("emailfeedback").innerHTML = "";
+            }
+
+            // Password validation
+            if (!password || !/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(password)) {
+                document.getElementById("password").style.border="1px solid red";
+                document.getElementById("passfeedback").innerHTML = "Mật khẩu phải từ 8 ký tự trở lên, có 1 chữ số, 1 chữ in hoa, 1 ký tự đặc biệt.";
+                return;
+            }else{
+                document.getElementById("password").style.border="1px solid #dee2e6";
+                document.getElementById("passfeedback").innerHTML = "";
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("retype-password").style.border="1px solid red";
+                document.getElementById("repassfeedback").innerHTML = "Mật khẩu không trùng.";
+                return;
+            }else{
+                document.getElementById("retype-password").style.border="1px solid #dee2e6";
+                document.getElementById("repassfeedback").innerHTML = "";
+            }
+            });
+        });
+    </script>
+</body>
+</html>
