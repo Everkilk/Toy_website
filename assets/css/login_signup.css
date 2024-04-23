@@ -16,6 +16,12 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+
 #container .slide{
     left: 0;
     right: 0;
@@ -38,28 +44,37 @@
 #container .user_block{
     z-index: 1;
     position: relative;
+    width:400px;
+    background-color: #fff;
+    margin-top:10%;
 }
 
+#container #login{
+    display: none;
+}
 
-#modal .modal-content{
+#container .user_block{
     padding:0 40px 20px;
+    border-radius:25px;
+    border:none;
 }
 
-#modal .modal-content .modal-header{
+#container .user_block .block-header{
     height:150px;
     padding:0;
+    display: flex;
+    justify-content: center;
 }
 
-.modal-content .modal-header img{
+.user_block .block-header img{
     height:100%;
-    margin: auto;
 }
 
-.modal-content .modal-body {
-    padding:25px 0;
+.user_block .block-body {
+    padding-bottom:25px;
 }
 
-#login .modal-body input{
+#login .block-body input{
     margin-bottom:10px;
     font-size:14px;
     color:rgb(71, 71, 71);
@@ -70,7 +85,7 @@
     height:40px;
 }
 
-#login .modal-body .forget_pass button{
+#login .block-body .forget_pass button{
     border:none;
     background-color: none;
     font-size:14px;
@@ -78,11 +93,11 @@
     padding:0;
 }
 
-#login .modal-body .forget_pass button:hover{
+#login .block-body .forget_pass button:hover{
     color:#547905;
 }
 
-.modal-body .submit_login{
+.block-body .submit_login{
     height:40px;
     border-radius:20px;
     background-color: #74a607;
@@ -91,36 +106,36 @@
     margin-top:20px;
 }
 
-.modal-body .submit_login:hover{
+.block-body .submit_login:hover{
     background-color: #6c9b07;
     color:#fff;
 }
 
-.modal-content .modal-footer{
+.user_block .block-footer{
     padding:0;
+    display: flex;
+    justify-content: right;
 }
 
-.modal-content .modal-footer .btn{
+.user_block .block-footer .btn{
     font-size:12px;
     padding:0;
-    margin:0;
-    margin-top:5px;
 }
 
-.modal-content .modal-footer .btn:hover{
+.user_block .block-footer .btn:hover{
     color:#547905;
     text-decoration: underline;
     text-decoration-color: #6c9b07;
 }
 
-#signup .modal-body .gender-checkbox {
+#signup .block-body .gender-checkbox {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width:75%;
 }
 
-#signup .modal-body .row{
+#signup .block-body .row{
     margin-bottom:15px;
 } 
 
@@ -132,6 +147,25 @@
 #signup .form-label{
     font-weight: bold;
     font-size:14px;
+}
+
+#signup .date_block{
+    justify-content: space-between;
+    display: flex;
+}
+
+#signup .date_block .form-select,
+#singup .date_block .form-select option{
+    font-size: 0.7rem !important;
+}
+
+.date_block #dob-year{
+    width:38%;
+}
+
+.date_block #dob-month,
+.date_block #dob-day{
+    width:28%;
 }
 
 #signup .invalid-feedback{
