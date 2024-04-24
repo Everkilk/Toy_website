@@ -28,12 +28,13 @@
                 <img src="../assets/img/Logo/MECHA.png" alt="#" class="img-fluid">
             </div>
             <div class="block-body">
-                <input type="email" class="form-control" placeholder="Email">
-                <input type="password" class="form-control" placeholder="Mật khẩu">
+                <input type="email" class="form-control" id="email_login" placeholder="Email">
+                <input type="password" class="form-control" id="password_login" placeholder="Mật khẩu">
+                <div class="invalid-feedback" id="loginfeedback"></div>
                 <div class="forget_pass">
                     <button class="btn">Quên mật khẩu?</button>
                 </div>
-                <button class="btn submit_login" type="button">Đăng nhập</button>
+                <button class="btn submit_login" type="button" id="login_btn">Đăng nhập</button>
             </div>
             <div class="block-footer">
                 <button class="btn"><a href="../html/home.html">Trang chủ</a></button>
@@ -185,104 +186,120 @@
     </div>       
     <script>
         $(document).ready(function() {
-            setInterval(changeSlideshow,5000);
-            let wallpaper = 1;
-            let slide ="";
-            let url = "";
-            function changeSlideshow(){
-                wallpaper++;
-                if(wallpaper>6){
-                    wallpaper = 1;
+            // Change from login to signup form
+            $('#changeToSignup').click(function(){
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('signup').style.display = 'block';
+            });
+
+            // Change from signup to login form
+            $('#changeToLogin').click(function(){
+                document.getElementById('login').style.display = 'block';
+                document.getElementById('signup').style.display = 'none';
+            });
+
+            // Validation for login form
+            $('#login_submit').click(function() {
+                event.preventDefault();
+                let password = $('#password').val();
+                let confirmPassword = $('#retype-password').val();
+                let fullName = $('#FullName').val();
+                let email = $('#gmail').val();
+                //Full name validation
+                if (!fullName || !/^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$/.test(fullName)) {
+                    document.getElementById("FullName").style.border="1px solid red";
+                    document.getElementById("namefeedback").innerHTML = "Chữ cái đầu phải viết hoa, phải có ít nhất họ và tên.";
+                    return;
+                }else{
+                    document.getElementById("FullName").style.border="1px solid #dee2e6";
+                    document.getElementById("namefeedback").innerHTML = "";
                 }
-                slide = "slide"+wallpaper;
-                url = "../assets/img/Login_Signup/Slide/"+slide+".jpg";
+                // Email validation
+                if(!email || !/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email)){
+                    document.getElementById("gmail").style.border="1px solid red";
+                    document.getElementById("emailfeedback").innerHTML = "Không được để trống, phải đúng định dạng email";
+                    return;
+                }else{
+                    document.getElementById("gmail").style.border="1px solid #dee2e6";
+                    document.getElementById("emailfeedback").innerHTML = "";
+                }
 
-                
-                // $('.wallpaper').animate({ opacity: 0.5 }, 800, function() {
-                //     // Change background image
-                    
-                // });
-                // $('.wallapper').fadeOut("slow",function(){
-                    
-                // })
-                // $('.wallpaper').animate({opacity:0.5},300,function(){
-                //     $('.wallpaper').css('background-image', 'url(' + url + ')');
-                //     $('.wallpaper').animate({opacity:1},800);
-                //     $('.wallpaper').fadeIn(800);
-                // });
-                // $('.wallpaper').css('background-image', 'url(' + url + ')').fadeIn("slow");
-                
-            };
+                // Gender validation
+                if($('input[name="gender"]:checked').length>0){
+                    document.getElementById("sexfeedback").innerHTML = "";
+                }else{
+                    document.getElementById("sexfeedback").innerHTML = "Chọn ít nhất 1 trong 3";
+                    return
+                }
+
+                // Date of birth validation
+                var dob_year = $('#dob-year').val();
+                var dob_month = $('#dob-month').val();
+                var dob_day = $('#dob-day').val();
+                var age = 2024 - dob_year;
+                var m = 4 - dob_month;
+                if (m < 0 || (m === 0 && 25 < dob_day)) {
+                    age--;
+                }
+                if (!age || age < 12) {
+                    document.getElementById("dob-year").style.border="1px solid red";
+                    document.getElementById("dob-month").style.border="1px solid red";
+                    document.getElementById("dob-day").style.border="1px solid red";
+                    document.getElementById("datefeedback").innerHTML = "Bạn phải ít nhất 12 tuổi trở lên.";
+                    return;
+                }else{
+                    document.getElementById("dob-year").style.border="1px solid #dee2e6";
+                    document.getElementById("dob-month").style.border="1px solid #dee2e6";
+                    document.getElementById("dob-day").style.border="1px solid #dee2e6";
+                    document.getElementById("datefeedback").innerHTML = "";
+                }
+
+                // Password validation
+                if (!password || !/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(password)) {
+                    document.getElementById("password").style.border="1px solid red";
+                    document.getElementById("passfeedback").innerHTML = "Mật khẩu phải từ 8 ký tự trở lên, có 1 chữ số, 1 chữ in hoa, 1 ký tự đặc biệt.";
+                    return;
+                }else{
+                    document.getElementById("password").style.border="1px solid #dee2e6";
+                    document.getElementById("passfeedback").innerHTML = "";
+                }
+
+                if (password !== confirmPassword) {
+                    document.getElementById("retype-password").style.border="1px solid red";
+                    document.getElementById("repassfeedback").innerHTML = "Mật khẩu không trùng.";
+                    return;
+                }else{
+                    document.getElementById("retype-password").style.border="1px solid #dee2e6";
+                    document.getElementById("repassfeedback").innerHTML = "";
+                }
+                // Save user information
+                let user = {
+                    email : email,
+                    password : password,
+                }
+                localStorage.setItem("User", JSON.stringify(user));
+            });
             
-            $('#login_submit2').click(function() {
-            event.preventDefault();
-            var password = $('#password').val();
-            var confirmPassword = $('#retype-password').val();
-            var fullName = $('#FullName').val();
-            var email = $('#gmail').val();
-            //Full name validation
-            if (!fullName || !/^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$/.test(fullName)) {
-                document.getElementById("FullName").style.border="1px solid red";
-                document.getElementById("namefeedback").innerHTML = "Chữ cái đầu phải viết hoa, phải có ít nhất họ và tên.";
-                return;
-            }else{
-                document.getElementById("FullName").style.border="1px solid #dee2e6";
-                document.getElementById("namefeedback").innerHTML = "";
-            }
-
-            // Gender validation
-            if($('input[name="gender"]:checked').length>0){
-                document.getElementById("sexfeedback").innerHTML = "";
-            }else{
-                document.getElementById("sexfeedback").innerHTML = "Chọn ít nhất 1 trong 3";
-                return
-            }
-
-            // Date of birth validation
-            var dob = new Date(document.getElementById('age').value);
-            var today = new Date();
-            var age = today.getFullYear() - dob.getFullYear();
-            var m = today.getMonth() - dob.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
-                age--;
-            }
-            if (!age || age < 12) {
-                document.getElementById("age").style.border="1px solid red";
-                document.getElementById("datefeedback").innerHTML = "Bạn phải ít nhất 12 tuổi trở lên.";
-                return;
-            }else{
-                document.getElementById("age").style.border="1px solid #dee2e6";
-                document.getElementById("datefeedback").innerHTML = "";
-            }
-
-            // Email validation
-            if(!email || !/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email)){
-                document.getElementById("gmail").style.border="1px solid red";
-                document.getElementById("emailfeedback").innerHTML = "Không được để trống, phải đúng định dạng email";
-                return;
-            }else{
-                document.getElementById("gmail").style.border="1px solid #dee2e6";
-                document.getElementById("emailfeedback").innerHTML = "";
-            }
-
-            // Password validation
-            if (!password || !/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(password)) {
-                document.getElementById("password").style.border="1px solid red";
-                document.getElementById("passfeedback").innerHTML = "Mật khẩu phải từ 8 ký tự trở lên, có 1 chữ số, 1 chữ in hoa, 1 ký tự đặc biệt.";
-                return;
-            }else{
-                document.getElementById("password").style.border="1px solid #dee2e6";
-                document.getElementById("passfeedback").innerHTML = "";
-            }
-
-            if (password !== confirmPassword) {
-                document.getElementById("retype-password").style.border="1px solid red";
-                document.getElementById("repassfeedback").innerHTML = "Mật khẩu không trùng.";
-                return;
-            }else{
-                document.getElementById("retype-password").style.border="1px solid #dee2e6";
-                document.getElementById("repassfeedback").innerHTML = "";
-            }
+            // Check login information
+            $('#login_btn').click(function(){
+                let email = $('#email_login').val();
+                let password = $('#password_login').val();
+                let data = JSON.parse(localStorage.getItem("User"));
+                if(email.match(data.usernames) && password.match(data.password)){
+                    document.getElementById("email_login").style.border="1px solid #dee2e6";
+                    document.getElementById("password_login").style.border="1px solid #dee2e6";
+                    document.getElementById("loginfeedback").innerHTML = "";
+                    let guest = {
+                        online:1,
+                    }
+                    localStorage.setItem("guest", JSON.stringify(guest));
+                    window.location.href = "home.html";
+                }else{
+                    document.getElementById("email_login").style.border="1px solid red";
+                    document.getElementById("password_login").style.border="1px solid red";
+                    document.getElementById("loginfeedback").innerHTML = "Gamil hoặc mật khẩu sai";
+                    return;
+                }
             });
         });
     </script>

@@ -209,7 +209,7 @@
     width:28%;
 }
 
-#signup .invalid-feedback{
+.user_block .invalid-feedback{
     display: block;
     font-size:12px;
     margin-top:5px;
