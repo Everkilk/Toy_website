@@ -56,9 +56,15 @@ body{
     display: flex;
 }
 
-#container .header img{
+#container .header .img_home a{
+    display: flex;
     height:100%;
+}
+
+#container .header img{
+    height:80%;
     width:auto;
+    margin:auto 0;
     cursor: pointer;
 }
 

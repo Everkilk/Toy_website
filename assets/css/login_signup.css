@@ -21,6 +21,24 @@
     src: url(../font/Roboto-Regular.ttf);
 }
 
+@keyframes changeIMG{
+    0%{
+        background-image: url(../img/Login_Signup/Slide/slide2.jpg);
+    }
+    25%{
+        background-image: url(../img/Login_Signup/Slide/slide3.jpg);
+    }
+    50%{
+        background-image: url(../img/Login_Signup/Slide/slide4.jpg);
+    }
+    75%{
+        background-image: url(../img/Login_Signup/Slide/slide5.jpg);
+    }
+    100%{
+        background-image: url(../img/Login_Signup/Slide/slide6.jpg);
+    }
+}
+
 
 #container .slide{
     left: 0;
@@ -39,6 +57,13 @@
     height:100%;
     background-position-x: 50%;
     background-position-y: 0;
+    animation-name: changeIMG;
+    animation-direction: alternate-reverse;
+    animation-play-state:running ;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 #container .user_block{
@@ -51,6 +76,10 @@
 
 #container #login{
     display: none;
+}
+
+#container #signup{
+    /* display: none; */
 }
 
 #container .user_block{
@@ -66,8 +95,14 @@
     justify-content: center;
 }
 
-.user_block .block-header img{
-    height:100%;
+#login .block-header img{
+    height:70%;
+    margin:auto 0;
+}
+
+#signup .block-header img{
+    height:80%;
+    margin:auto 0;
 }
 
 .user_block .block-body {
@@ -114,7 +149,7 @@
 .user_block .block-footer{
     padding:0;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 .user_block .block-footer .btn{
@@ -122,7 +157,13 @@
     padding:0;
 }
 
-.user_block .block-footer .btn:hover{
+.user_block .block-footer .btn a{
+    text-decoration: none;
+    color:#000;
+}
+
+.user_block .block-footer .btn:hover,
+.user_block .block-footer .btn a:hover{
     color:#547905;
     text-decoration: underline;
     text-decoration-color: #6c9b07;
@@ -132,7 +173,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:75%;
+    width:50%;
 }
 
 #signup .block-body .row{
@@ -173,3 +214,8 @@
     font-size:12px;
     margin-top:5px;
 }
+
+#container #signup{
+    width:600px;
+}
+
