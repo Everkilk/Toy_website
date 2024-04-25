@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: jakarta;
-    src: url(../font/PlusJakartaSans-Regular.ttf);
+    src: url(../font/Quicksand-Regular.ttf);
 }
 
 @font-face {
     font-family: jakarta;
-    src: url(../font/PlusJakartaSans-Bold.ttf);
+    src: url(../font/Quicksand-Bold.ttf);
     font-weight: bold;
 }
 

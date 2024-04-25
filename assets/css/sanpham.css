@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: jakarta;
-    src: url(../font/PlusJakartaSans-Regular.ttf);
+    src: url(../font/Quicksand-Regular.ttf);
 }
 
 @font-face {
     font-family: jakarta;
-    src: url(../font/PlusJakartaSans-Bold.ttf);
+    src: url(../font/Quicksand-Bold.ttf);
     font-weight: bold;
 }
 
@@ -311,6 +311,88 @@ a{
     font-weight: bold;
 }
 
+.product .clearfix .product_layout-left .main_img img{
+    width:100%;
+    height:100%;
+}
+
+.product .clearfix .product_layout-left .img_choosing{
+    display:flex;
+    justify-content: space-between;
+    height:100px;
+}
+
+.clearfix .product_layout-left .img_choosing img{
+    height:100%;
+}
+
+
+.product_layout-right .product_info {
+    margin-bottom:5px;
+}
+
+.product_layout-right .border-bt{
+    padding-bottom:20px;
+    border-bottom:1px solid #dee2e6 ;
+}
+
+.product_layout-right .product_price{
+    padding:8px 16px;
+}
+
+.product_layout-right .product_price span{
+    font-size:30px;
+    font-weight: bold;
+    color:#74a607;
+}
+
+.product_layout-right .add .quantity{
+    padding:20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.product_layout-right .add .quantity span{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-number{
+    display: flex;
+}
+
+.btn-number button{
+    width:38px;
+    transition:all 0.3s ease;
+    color:#74a607;
+    margin-right:10px;
+}
+
+.btn-number button:hover{
+    border:1px solid #74a607!important;
+}
+
+.btn-number input{
+    max-width:80px;
+}
+
+.product_layout-right .add .add_cart{
+    border-radius:8px;
+    width:50%;
+    background-color:#74a607;
+    color:#fff;
+    border:1px solid #74a607;
+    padding:10px;
+    font-weight: bold;
+    height:48px;
+    transition: all .5s ease-in-out;
+}   
+
+.product_layout-right .add .add_cart:hover{
+    background-color: #74a607;
+    box-shadow: 0 0 2px 1px #618b06;
+}
+
 .body .product .product_offer{
     padding:16px;
     border:8px;
@@ -357,6 +439,21 @@ a{
 
 .Hotline .down{
     color:#060724;
+}
+
+.body .descript h3{
+    font-size:18px;
+    font-weight: bold;
+    display: block;
+    width:100%;
+    padding:16px 0;
+    border-bottom:1px solid #dee2e6;
+}
+
+.body .descript .descript_text{
+    padding:16px 0;
+    overflow: hidden;
+    max-height:inherit;
 }
 
 .footer .footer_part h4{

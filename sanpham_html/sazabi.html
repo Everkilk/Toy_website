@@ -135,8 +135,48 @@
                         <div class="col-12">
                             <h1 class="product-name text-uppercase mb-3 pt-2">MSN-04 Sazabi ver.Ka 6631</h1>
                         </div>
-                        <div class="product_layout-left col-lg-6"></div>
-                        <div class="product_layout-right col-lg-6"></div>
+                        <div class="product_layout-left col-12 col-sm-12 col-md-6 col-lg-6 mb-3">
+                            <div class="main_img">
+                                <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="slide">
+                            </div>
+                            <div class="img_choosing">
+                                <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" onclick="img('../assets/img/Product/Gundam/Sazabi/4.jpg')">
+                                <img src="../assets/img/Product/Gundam/Sazabi/3.jpg" onclick="img('../assets/img/Product/Gundam/Sazabi/3.jpg')">
+                                <img src="../assets/img/Product/Gundam/Sazabi/2.jpg" onclick="img('../assets/img/Product/Gundam/Sazabi/2.jpg')">
+                                <img src="../assets/img/Product/Gundam/Sazabi/1.jpg" onclick="img('../assets/img/Product/Gundam/Sazabi/1.jpg')">
+                            </div>
+                        </div>
+                        <div class="product_layout-right col-12 col-sm-12 col-md-6 col-lg-6 mb-3">
+                            <div class="product_info">
+                                <span>Tình trạng :<a href="#"> Còn hàng</a></span>
+                            </div>
+                            <div class="product_info border-bt">
+                                <span>Loại : <a href="#">Mô hình mecha / gundam</a></span>
+                            </div>
+                            <div class="product_price">
+                                <span>829.000 Đ</span>
+                            </div>
+                            <div class="add">
+                                <div class="quantity">
+                                    <span>Số lượng : </span>
+                                    <div class="btn-number">
+                                        <button class="mr-2 border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <button class="mr-2 border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                        <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
+                                    </div>
+                                </div>
+                                <div class="cart">
+                                    <button type="button" class="add_cart">
+                                        <i class="fa-solid fa-cart-shopping" style="margin-right:10px"></i>
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-3">
@@ -176,6 +216,24 @@
                             <p class="d-block m-0 down">0875 928 317</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="descript">
+                <h3>Thông tin chi tiết</h3>
+                <div class="descript_text">
+                    Mô hình Gundam MG MSN 04 Sazabi Ver.Ka bandai - 
+                    Sản phậm nhựa cao cấp với độ sắc nét cao - 
+                    Sản xuất bởi Bandai Namco – Nhật Bản Chính hãng - 
+                    An toàn với trẻ em - 
+                    Phát triển trí não cho trẻ hiệu quả đi đôi với niềm vui thích bất tận - 
+                    Rèn luyện tính kiên nhẫn cho người chơi - 
+                    Phân phối bởi Mecha Store - 
+                    Thông tin cơ bản : 
+                    Mô hình gundam (gunpla) là một loại mô hình nhựa được gọi là Model kit, bao gồm nhiều mảnh nhựa rời được gọi là part (bộ phận), khi lắp ráp các part lại với nhau sẽ được mô hình hoàn chỉnh. Các mảnh nhựa rời này được gắn trên khung nhựa gọi là runner. Mỗi một hộp sản phẩm Gunpla bao gồm nhiều runner và các phụ kiện liên quan, một tập sách nhỏ (manual) bên trong giới thiệu sơ lược về mẫu Gundam trong hộp và phần hướng dẫn cách lắp ráp. o Dòng gundam với các chi tiết hoàn hảo. o Các khớp cử động linh hoạt theo ý muốn.  Người chơi sẽ thỏa sức sáng tạo và đam mê. 
+                    THƯƠNG HIỆU : BANDAI – NHẬT BẢN 
+                    PHIÊN BẢN :MG 1/100 
+                    CHIỀU CAO: 25cm 
+                    PHÂN LOẠI SP : LẮP RÁP
                 </div>
             </div>
         </div>
@@ -239,6 +297,15 @@
         }
         function nu(){
             img2.src = "../assets/img/Home/nav/nu.jpg";
+        }
+
+        function img(anything){
+            document.querySelector('.slide').src=anything;
+        }
+
+        function change(change) {
+            const line = document.querySelector('.home');
+            line.style.background = change;
         }
     </script>
 </body>
