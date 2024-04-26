@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/about.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/library/bootstrap/bootstrap.min.css">
+    <script src="../assets/library/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/library/jquery/jquery-3.7.1.js"></script>
+    <link href="../assets/icon/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/icon/css/solid.css" rel="stylesheet" />
+    <link href="../assets/icon/css/brands.css" rel="stylesheet" />
+    <title>MECHA</title>
+</head>
+<body>
+    <div id="container">
+        <div class="pc">
+            <div class="header row">
+                <div class="img_home col-3">
+                    <a href="../html/home.html">
+                        <img src="../assets/img/Logo/MECHA.png" alt="#">
+                    </a>
+                </div>
+                <form action="#" class="col-6">
+                    <div class="field">
+                        <input type="search" placeholder="Bạn muốn tìm món đồ chơi nào ?">
+                        <label for="">Bạn muốn tìm món đồ chơi nào ?</label>
+                        <button aria-label="Bạn muốn tìm món đồ chơi nào ?">
+                            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #74a607;"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="button_container col-4 row">
+                    <a href="../html/login_signup.html" class="col" id="user">
+                        <div class="button_block">
+                            <i class="fa-solid fa-image-portrait fa-xl" style="color: #74a607;"></i>
+                            <p>Đăng nhập</p>
+                        </div>
+                    </a>
+                    <a href="../html/cart.html" class="col">
+                        <div class="button_block">
+                            <i class="fa-solid fa-cart-shopping fa-xl"  style="color: #74a607;"></i>
+                            <p>Giỏ hàng</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="root">
+                        <a href="#">Phim</a>
+                        <div class="sub_nav">
+                            <div class="flex_box">
+                                <img src="../assets/img/Home/nav/gundam.jpg" alt="" id="img_preview1">
+                                <div>
+                                    <h3>Phim</h3>
+                                    <table>
+                                        <tr>
+                                            <td id="gundam"><a href="../html/danhmuc_gundam.html">Gundam</a></td>
+                                            <td><a href="../html/danhmuc_8_10tuoi.html">8-10 tuổi</a></td>
+                                            <td class="aside_link1">
+                                                <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="transformer" onmouseover="transformer()"><a href="../html/danhmuc_transformer.html">Transformer</a></td>
+                                            <td><a href="../html/danhmuc_10_16tuoi.html">10-16 tuổi</a></td>
+                                            <td class="aside_link2">
+                                                <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="pacificrim" onmouseover="pacificrim()"><a href="../html/danhmuc_pacificrim.html">Pacific Rim</a></td>
+                                            <td><a href="../html/danhmuc_tren16tuoi.html">Trên 16 tuổi</a></td>
+                                            <td class="aside_link3">
+                                                <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="warhammer" onmouseover="warhammer()"><a href="../html/danhmuc_warhammer.html">Warhammer</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="root">
+                        <a href="#">Giới tính</a>
+                        <div class="sub_nav">
+                            <div class="flex_box">
+                                <img src="../assets/img/Home/nav/nam.jpg" alt="" id="img_preview2">
+                                <div>
+                                    <h3>Giới tính</h3>
+                                    <table>
+                                        <tr>
+                                            <td id="nam" onmouseover="nam()"><a href="../html/danhmuc_nam.html">Nam</a></td>
+                                            <td><a href="../html/danhmuc_8_10tuoi.html">8-10 tuổi</a></td>
+                                            <td class="aside_link1">
+                                                <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="nu" onmouseover="nu()"><a href="../html/danhmuc_nu.html">Nữ</a></td>
+                                            <td><a href="../html/danhmuc_10_16tuoi.html">10-16 tuổi</a></td>
+                                            <td class="aside_link2">
+                                                <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#"></a></td>
+                                            <td><a href="../html/danhmuc_tren16tuoi.html">Trên 16 tuổi</a></td>
+                                            <td class="aside_link3">
+                                                <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../html/danhmuc_lego.html">Lego</a></li>
+                    <li><a href="../html/danhmuc_mohinh.html">Mô hình</a></li>
+                    <li><a href="../html/danhmuc_gundam.html">Gundam</a></li>
+                    <li><a href="../html/aboutus.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="body">
+                <div class="first-block">
+                    <div class="left-first">
+                        <h3 class="text-center">MONG MUỐN</h3>
+                        <p>
+                            Trong tiệm đồ chơi nhỏ bé của mình, tôi luôn tự hào về những mô hình độc 
+                            đáo mà mình chọn lựa. Từ những chiếc xe cổ điển đến những con robot hấp dẫn, mỗi 
+                            mẫu sản phẩm đều là một tác phẩm nghệ thuật nhỏ, mang lại niềm vui và kỷ niệm đáng 
+                            nhớ cho những ai sở hữu chúng.
+
+                            Mỗi khi nhìn thấy những khách hàng trẻ em vui vẻ tò mò đến cửa hàng, tôi luôn 
+                            cảm thấy hạnh phúc. Đó là niềm vui mà chỉ một người đam mê mô hình mới hiểu được. 
+                            Tôi mong muốn mở ra một không gian sáng tạo, nơi mà mọi người không chỉ đến để 
+                            mua đồ chơi, mà còn để tìm kiếm cảm hứng và kỷ niệm.
+                        </p>
+                    </div>
+                    <div class="right-first">
+                        <img src="../assets/img/About/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="second-block mt-5">
+                    
+                    <div class="block">
+                        <div class="left-second">
+                            <img src="../assets/img/About/1.webp" class="rounded" alt="">
+                        </div>
+                        <div class="right-second">
+                            <h3 class="text-center">NIỀM TIN</h3>
+                            <p>
+                                Tâm hồn của tôi trở nên trẻ trung và phấn khích mỗi khi bắt gặp một đứa trẻ 
+                                nhìn chăm chú vào một mô hình, cố gắng hiểu sâu hơn về nó. Đôi khi, tôi còn tự hỏi 
+                                liệu một ngày nào đó, đứa trẻ ấy sẽ trở thành một nhà thiết kế, một kỹ sư hoặc thậm 
+                                chí là một nghệ sĩ nổi tiếng, và những mô hình nhỏ bé trong cửa hàng của tôi sẽ là 
+                                nguồn cảm hứng cho họ.
+    
+                                Bản thân tôi không chỉ đơn thuần là một chủ cửa hàng, mà còn là một người sáng tạo và 
+                                người đam mê mô hình. Đối với tôi, cửa hàng không chỉ là nơi để kinh doanh, mà còn 
+                                là một phần của cuộc sống của tôi, nơi tôi có thể chia sẻ niềm đam mê của mình với 
+                                mọi người. Với hy vọng rằng, mỗi món đồ chơi anh bày bán không chỉ là một món hàng, 
+                                mà còn là một cảm xúc, một kỷ niệm và một phần của sự vui vẻ và sáng tạo trong cuộc 
+                                sống.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer row mt-5">
+                <div class="footer_part col">
+                    <h4>ĐIỀU KHOẢN & CHÍNH SÁCH</h4>
+                    <ul>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách tích lũy điểm</a></li>
+                        <li><a href="#">Điều khoản điều kiện</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part col">
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách bảo hành đổi trả hàng hóa</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part contact_inform col">
+                    <h4>LIÊN HỆ</h4>
+                    <ul>
+                        <li>Email : <span>hotro@mecha.com.vn</span></li>
+                        <li>Hotline : <span>1900 1912</span></li>
+                        <li>Giờ làm việc : <span>0:00 - 24 : 00</span></li>
+                    </ul>
+                </div>
+                <div class="footer_part col">
+                    <h4>NHẬN THÔNG TIN KHUYẾN MÃI</h4>
+                    <input type="email" class="form-control" placeholder="Email của bạn">
+                    <button class="btn" type="button">Nhận thông tin</button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <nav class=".navbar navbar-expand-lg">
+                <div class="header row">
+                    <div class="img_home col-3 navbar-brand">
+                        <a href="../html/home.html">
+                            <img src="../assets/img/Logo/MECHA.png" alt="#">
+                        </a>
+                    </div>
+                    <div class="button_container col-5 row">
+                        <a href="../html/login_signup.html" class="col" id="user">
+                            <div class="button_block">
+                                <i class="fa-solid fa-image-portrait fa-lg" style="color: #74a607;"></i>
+                                <p class="collapse">Đăng nhập</p>
+                            </div>
+                        </a>
+                        <a href="../html/cart.html" class="col">
+                            <div class="button_block">
+                                <i class="fa-solid fa-cart-shopping fa-lg"  style="color: #74a607;"></i>
+                                <p class="collapse">Giỏ hàng</p>
+                            </div>
+                        </a>
+                        <button class="navbar-toggler col button" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-lg" style="color: #74a607;"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown " >
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#filmDropdown" aria-expanded="false">Phim</a>
+                            <ul class="dropdown-menu" id="filmDropdown">
+                                <li><a class="dropdown-item" href="../html/danhmuc_gundam.html">Gundam</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_transformer.html">Transformer</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_pacificrim.html">Pacific Rim</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_warhammer.html">Warhammer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown nav-item" >
+                            <a href="#" class="dropdown-toggle" data-bs-target="#sexDropdown" data-bs-toggle="dropdown" aria-expanded="false">Giới tính</a>
+                            <ul class="dropdown-menu " id="sexDropdown">
+                                <li><a class="dropdown-item" href="../html/danhmuc_nam.html">Nam</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_nu.html">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../html/danhmuc_lego.html">Lego</a></li>
+                        <li><a href="../html/danhmuc_mohinh.html">Mô hình</a></li>
+                        <li><a href="../html/danhmuc_gundam.html">Gundam</a></li>
+                        <li><a href="../html/aboutus.html">About us</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="body">
+                <div class="first-block">
+                    <div class="left-first">
+                        <h3 class="text-center">MONG MUỐN</h3>
+                        <p>
+                            Trong tiệm đồ chơi nhỏ bé của mình, tôi luôn tự hào về những mô hình độc 
+                            đáo mà mình chọn lựa. Từ những chiếc xe cổ điển đến những con robot hấp dẫn, mỗi 
+                            mẫu sản phẩm đều là một tác phẩm nghệ thuật nhỏ, mang lại niềm vui và kỷ niệm đáng 
+                            nhớ cho những ai sở hữu chúng.
+
+                            Mỗi khi nhìn thấy những khách hàng trẻ em vui vẻ tò mò đến cửa hàng, tôi luôn 
+                            cảm thấy hạnh phúc. Đó là niềm vui mà chỉ một người đam mê mô hình mới hiểu được. 
+                            Tôi mong muốn mở ra một không gian sáng tạo, nơi mà mọi người không chỉ đến để 
+                            mua đồ chơi, mà còn để tìm kiếm cảm hứng và kỷ niệm.
+                        </p>
+                    </div>
+                    <div class="right-first">
+                        <img src="../assets/img/About/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="second-block mt-5">
+                    
+                    <div class="block">
+                        <div class="left-second">
+                            <img src="../assets/img/About/1.webp" class="rounded" alt="">
+                        </div>
+                        <div class="right-second">
+                            <h3 class="text-center">NIỀM TIN</h3>
+                            <p>
+                                Tâm hồn của tôi trở nên trẻ trung và phấn khích mỗi khi bắt gặp một đứa trẻ 
+                                nhìn chăm chú vào một mô hình, cố gắng hiểu sâu hơn về nó. Đôi khi, tôi còn tự hỏi 
+                                liệu một ngày nào đó, đứa trẻ ấy sẽ trở thành một nhà thiết kế, một kỹ sư hoặc thậm 
+                                chí là một nghệ sĩ nổi tiếng, và những mô hình nhỏ bé trong cửa hàng của tôi sẽ là 
+                                nguồn cảm hứng cho họ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer mt-5">
+                <div class="footer_part">
+                    <h4>NHẬN THÔNG TIN KHUYẾN MÃI</h4>
+                    <input type="email" class="form-control" placeholder="Email của bạn">
+                    <button class="btn" type="button">Nhận thông tin</button>
+                </div>
+                <div class="footer_part mt-4">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#rules">ĐIỀU KHOẢN & CHÍNH SÁCH</h4>
+                    <ul class="collapse" id="rules">
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách tích lũy điểm</a></li>
+                        <li><a href="#">Điều khoản điều kiện</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#support">HỖ TRỢ KHÁCH HÀNG</h4>
+                    <ul class="collapse" id="support">
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách bảo hành đổi trả hàng hóa</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part contact_inform">
+                    <h4>LIÊN HỆ</h4>
+                    <ul>
+                        <li>Email : <span>hotro@mecha.com.vn</span></li>
+                        <li>Hotline : <span>1900 1912</span></li>
+                        <li>Giờ làm việc : <span>0:00 - 24 : 00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/user.js"></script>
+    <script>
+        
+        document.getElementById("gundam").onmouseover = function() {gundam()};
+        document.getElementById("transformer").onmouseover = function() {transformer()};
+        document.getElementById("pacificrim").onmouseover = function() {pacificrim()};
+        document.getElementById("warhammer").onmouseover = function() {warhammer()};
+        document.getElementById("nam").onmouseover = function() {nam()};
+        document.getElementById("nu").onmouseover = function() {nu()};
+        var img1 = document.getElementById("img_preview1");
+        var img2 = document.getElementById("img_preview2"); 
+        function gundam(){
+            img1.src = "../assets/img/Home/nav/gundam.jpg";
+        }
+        function transformer(){
+            img1.src = "../assets/img/Home/nav/transformer.jpg";
+        }
+        function pacificrim(){
+            img1.src = "../assets/img/Home/nav/pacificrim.jpg";
+        }
+        function warhammer(){
+            img1.src = "../assets/img/Home/nav/warhammer.jpg";
+        }
+        function nam(){
+            img2.src = "../assets/img/Home/nav/nam.jpg";
+        }
+        function nu(){
+            img2.src = "../assets/img/Home/nav/nu.jpg";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+

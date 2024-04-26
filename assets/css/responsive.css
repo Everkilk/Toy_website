@@ -1,0 +1,220 @@
+/*PC*/
+@media (min-width:1024px) {
+    .pc{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+    #nav ul>li>a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px; 
+        background-color: #74a607; 
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #nav ul>li:hover>a::after {
+        transform: scaleX(1);
+    }
+    #nav ul{
+        display:flex;
+        width:70%;
+        margin:0 auto;
+        justify-content: space-between;
+        padding:0;
+    }
+}
+
+/*Mobile*/
+@media (max-width:740px) {
+    .pc{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+
+    .header .img_home{
+        width: 42% !important;
+        padding: 0 !important;
+    }
+
+    .header .img_home img{
+        height: unset !important;
+        width: 100% !important;
+    }
+
+    .button_container{
+        padding-right:0!important;
+    }
+
+    .button span,
+    .button_container .button{
+        display: flex!important;
+    }
+
+    .button span{
+        margin:auto;
+    }
+    .button span i{
+        margin:auto;
+    }
+
+    .button_container a,
+    .button_container .button{
+        margin-right:0!important;
+    }
+
+    .button_container .button_block,
+    .button_container .button{
+        justify-content: center!important;
+    }
+
+    #nav>ul{
+        justify-content: unset;
+        margin:unset;
+        width:100%;
+    }
+
+    .product_layout-right .add .add_cart{
+        width:100%;
+    }   
+
+    .catalog_block .your_product {
+        grid-template-columns: auto auto;
+    }
+
+    .your_product .product .product_name {
+        height:42px;
+    }
+
+    .your_product .product .product_price {
+        margin-top: 0.5rem;
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+    }
+
+    .your_product .product .add_cart {
+        font-size:12px;
+    }
+
+    #container .body .filter {
+        width: 300px;
+    }
+
+    .filter .selected{
+        font-size:12px;
+    }
+
+    #container #signup {
+        width: 300px;
+    }
+
+    #container #login{
+        width:300px;
+    }
+
+    #container .user_block {
+        padding: 0 20px 10px;
+    }
+
+    #container .user_block .block-header {
+        height: 80px;
+    }
+
+    #signup .block-body .gender-checkbox {
+        width: 80%;
+    }
+
+    #signup .form-label {
+        font-size: 12px;
+    }
+
+    .gender-checkbox label{
+        font-size:12px;
+    }
+
+    .body .dropdown .menu {
+        padding: 5px;
+        top: 5px;
+        left: 0;
+    }
+
+    .offer_block p{
+        font-size:8px;
+    }
+
+    .offer_block i{
+        font-size: 14px !important;
+    }
+
+    .footer h4{
+        font-size:14px!important;
+    }
+
+    .footer p,
+    .footer a{
+        font-size:10px!important;
+    }
+
+    .footer_part input {
+        font-size: 10px;
+        padding: 7px 0 7px 14px;
+    }
+
+    .footer_part button {
+        padding: 5px 10px;
+        font-size:10px;
+    }
+
+    .catalog_block h3{
+        font-size:25px;
+    }
+
+    .first-block  .left-first h3{
+        font-size:16px;
+    }
+
+    .first-block  .left-first p{
+        font-size:10px;
+    }
+
+    .body .first-block .right-first {
+        padding: 0;
+        display: flex;
+    }
+
+    .right-first img {
+        height: unset;
+        margin:auto;
+    }
+
+    .block .left-second {
+        display: flex;
+    }
+
+    .block .left-second img{
+        width:200px;
+        margin: auto;
+    }
+
+    .body .second-block .right-second {
+        margin-left: 10px;
+    }
+
+    .body .second-block .right-second h3{
+        font-size:16px;
+    }
+
+    .body .second-block .right-second p{
+        font-size:10px;
+    }
+
+
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/cart.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/library/bootstrap/bootstrap.min.css">
     <script src="../assets/library/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/library/jquery/jquery-3.7.1.js"></script>
@@ -14,268 +15,301 @@
 </head>
 <body>
     <div id="container">
-        <div class="header row">
-            <div class="img_home col-3">
-                <a href="../html/home.html">
-                    <img src="../assets/img/Logo/MECHA.png" alt="#">
-                </a>
-            </div>
-            <form action="#" class="col-6">
-                <div class="field">
-                    <input type="search" placeholder="Bạn muốn tìm món đồ chơi nào ?">
-                    <label for="">Bạn muốn tìm món đồ chơi nào ?</label>
-                    <button aria-label="Bạn muốn tìm món đồ chơi nào ?">
-                        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #74a607;"></i>
-                    </button>
+        <div class="pc">
+            <div class="header row">
+                <div class="img_home col-3">
+                    <a href="../html/home.html">
+                        <img src="../assets/img/Logo/MECHA.png" alt="#">
+                    </a>
                 </div>
-            </form>
-            <div class="button_container col-4 row">
-                <a href="../html/login_signup.html" class="col" id="user">
-                    <div class="button_block">
-                        <i class="fa-solid fa-image-portrait fa-xl" style="color: #74a607;"></i>
-                        <p>Đăng nhập</p>
+                <form action="#" class="col-6">
+                    <div class="field">
+                        <input type="search" placeholder="Bạn muốn tìm món đồ chơi nào ?">
+                        <label for="">Bạn muốn tìm món đồ chơi nào ?</label>
+                        <button aria-label="Bạn muốn tìm món đồ chơi nào ?">
+                            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #74a607;"></i>
+                        </button>
                     </div>
-                </a>
-                <a href="#" class="col">
-                    <div class="button_block">
-                        <i class="fa-solid fa-cart-shopping fa-xl"  style="color: #74a607;"></i>
-                        <p>Giỏ hàng</p>
-                    </div>
-                </a>
+                </form>
+                <div class="button_container col-4 row">
+                    <a href="../html/login_signup.html" class="col" id="user">
+                        <div class="button_block">
+                            <i class="fa-solid fa-image-portrait fa-xl" style="color: #74a607;"></i>
+                            <p>Đăng nhập</p>
+                        </div>
+                    </a>
+                    <a href="../html/cart.html" class="col">
+                        <div class="button_block">
+                            <i class="fa-solid fa-cart-shopping fa-xl"  style="color: #74a607;"></i>
+                            <p>Giỏ hàng</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div id="nav">
-            <ul>
-                <li class="root">
-                    <a href="#">Phim</a>
-                    <div class="sub_nav">
-                        <div class="flex_box">
-                            <img src="../assets/img/Home/nav/gundam.jpg" alt="" id="img_preview1">
-                            <div>
-                                <h3>Phim</h3>
-                                <table>
-                                    <tr>
-                                        <td id="gundam"><a href="../html/danhmuc_gundam.html">Gundam</a></td>
-                                        <td><a href="../html/danhmuc_8_10tuoi.html">8-10 tuổi</a></td>
-                                        <td class="aside_link1">
-                                            <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="transformer" onmouseover="transformer()"><a href="../html/danhmuc_transformer.html">Transformer</a></td>
-                                        <td><a href="../html/danhmuc_10_16tuoi.html">10-16 tuổi</a></td>
-                                        <td class="aside_link2">
-                                            <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="pacificrim" onmouseover="pacificrim()"><a href="../html/danhmuc_pacificrim.html">Pacific Rim</a></td>
-                                        <td><a href="../html/danhmuc_tren16tuoi.html">Trên 16 tuổi</a></td>
-                                        <td class="aside_link3">
-                                            <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="warhammer" onmouseover="warhammer()"><a href="../html/danhmuc_warhammer.html">Warhammer</a></td>
-                                    </tr>
-                                </table>
+            <div id="nav">
+                <ul>
+                    <li class="root">
+                        <a href="#">Phim</a>
+                        <div class="sub_nav">
+                            <div class="flex_box">
+                                <img src="../assets/img/Home/nav/gundam.jpg" alt="" id="img_preview1">
+                                <div>
+                                    <h3>Phim</h3>
+                                    <table>
+                                        <tr>
+                                            <td id="gundam"><a href="../html/danhmuc_gundam.html">Gundam</a></td>
+                                            <td><a href="../html/danhmuc_8_10tuoi.html">8-10 tuổi</a></td>
+                                            <td class="aside_link1">
+                                                <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="transformer" onmouseover="transformer()"><a href="../html/danhmuc_transformer.html">Transformer</a></td>
+                                            <td><a href="../html/danhmuc_10_16tuoi.html">10-16 tuổi</a></td>
+                                            <td class="aside_link2">
+                                                <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="pacificrim" onmouseover="pacificrim()"><a href="../html/danhmuc_pacificrim.html">Pacific Rim</a></td>
+                                            <td><a href="../html/danhmuc_tren16tuoi.html">Trên 16 tuổi</a></td>
+                                            <td class="aside_link3">
+                                                <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="warhammer" onmouseover="warhammer()"><a href="../html/danhmuc_warhammer.html">Warhammer</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="root">
-                    <a href="#">Giới tính</a>
-                    <div class="sub_nav">
-                        <div class="flex_box">
-                            <img src="../assets/img/Home/nav/nam.jpg" alt="" id="img_preview2">
-                            <div>
-                                <h3>Giới tính</h3>
-                                <table>
-                                    <tr>
-                                        <td id="nam" onmouseover="nam()"><a href="../html/danhmuc_nam.html">Nam</a></td>
-                                        <td><a href="../html/danhmuc_8_10tuoi.html">8-10 tuổi</a></td>
-                                        <td class="aside_link1">
-                                            <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="nu" onmouseover="nu()"><a href="../html/danhmuc_nu.html">Nữ</a></td>
-                                        <td><a href="../html/danhmuc_10_16tuoi.html">10-16 tuổi</a></td>
-                                        <td class="aside_link2">
-                                            <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#"></a></td>
-                                        <td><a href="../html/danhmuc_tren16tuoi.html">Trên 16 tuổi</a></td>
-                                        <td class="aside_link3">
-                                            <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                    </li>
+                    <li class="root">
+                        <a href="#">Giới tính</a>
+                        <div class="sub_nav">
+                            <div class="flex_box">
+                                <img src="../assets/img/Home/nav/nam.jpg" alt="" id="img_preview2">
+                                <div>
+                                    <h3>Giới tính</h3>
+                                    <table>
+                                        <tr>
+                                            <td id="nam" onmouseover="nam()"><a href="../html/danhmuc_nam.html">Nam</a></td>
+                                            <td><a href="../html/danhmuc_8_10tuoi.html">8-10 tuổi</a></td>
+                                            <td class="aside_link1">
+                                                <a href="#" style="color:#6638b6">Đồ chơi mới &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="nu" onmouseover="nu()"><a href="../html/danhmuc_nu.html">Nữ</a></td>
+                                            <td><a href="../html/danhmuc_10_16tuoi.html">10-16 tuổi</a></td>
+                                            <td class="aside_link2">
+                                                <a href="#" style="color:#ff6a14">Đồ chơi bán chạy &#8594;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#"></a></td>
+                                            <td><a href="../html/danhmuc_tren16tuoi.html">Trên 16 tuổi</a></td>
+                                            <td class="aside_link3">
+                                                <a href="#" style="color: #5986d9;">Tất cả đồ chơi &#8594;</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                    </li>
+                    <li><a href="../html/danhmuc_lego.html">Lego</a></li>
+                    <li><a href="../html/danhmuc_mohinh.html">Mô hình</a></li>
+                    <li><a href="../html/danhmuc_gundam.html">Gundam</a></li>
+                    <li><a href="../html/aboutus.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="body mt-4">
+                <div class="position_page mb-3"><a href="../html/home.html">Trang chủ</a><span>/</span><a href="#">Giỏ hàng</a></div>
+                <div class="product_pay row rounded pl-lg-3 pr-lg-3 pl-2 pr-2 pt-2 pb-2 pt-lg-3 pb-lg-3" style="min-height:350px">
+                    <div class="product_list col-md-8">
+                        <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix" id="base_product">
+                            <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute img_product">
+                            <div class="col-12 d-flex p-0">
+                                <p class="item-title clearfix mb-2">
+                                    <a href="#" class="font-weight-bold title">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
+                                    <span class="d-block small font-weight-bold"></span>
+                                    <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: <span class="small_price">149.000</span></span>
+                                </p>
+                                <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000</span>
+                            </div>
+                            <div class="number-input d-inline-flex rounded">
+                                <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                                <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
+                                <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <a href="../html/danhmuc_lego.html">Lego</a>
-                </li>
-                <li>
-                    <a href="../html/danhmuc_robot.html">Robot</a>
-                </li>
-                <li><a href="../html/danhmuc_gundam.html">Gundam</a></li>
-                <li><a href="../html/danhmuc_mohinh.html">Mô hình</a></li>
-            </ul>
-        </div>
-        <div class="body mt-4">
-            <div class="position_page mb-3"><a href="../html/home.html">Trang chủ</a><span>/</span><a href="#">Giỏ hàng</a></div>
-            <div class="product_pay row rounded pl-lg-3 pr-lg-3 pl-2 pr-2 pt-2 pb-2 pt-lg-3 pb-lg-3" style="min-height:350px">
-                <div class="product_list col-md-8">
-                    <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix variantId-107863246">
-                        <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute">
-                        <div class="col-12 d-flex p-0">
-                            <p class="item-title clearfix mb-2">
-                                <a href="../sanpham_html/sazabi.html" title="Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn ( THE WITCH FROM MERCURY) Tặng Base" class="font-weight-bold">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
-                                <span class="d-block small font-weight-bold"></span>
-                                <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: 149.000&nbsp;₫</span>
-                            </p>
-                            <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000&nbsp;₫</span>
+                    <div class="money_total col-md-4">
+                        <div class="money mb-4 p-3 d-flex align-items-center flex-wrap justify-content-between rounded">
+                            <p class="m-0 text-white">TỔNG</p>
+                            <p class="m-0 text-white" id="money_sum"></p>
                         </div>
-                        <div class="number-input d-inline-flex rounded">
-                            <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                            <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
-                            <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                        <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
-                    </div>
-                    <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix variantId-107863246">
-                        <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute">
-                        <div class="col-12 d-flex p-0">
-                            <p class="item-title clearfix mb-2">
-                                <a href="../sanpham_html/sazabi.html" title="Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn ( THE WITCH FROM MERCURY) Tặng Base" class="font-weight-bold">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
-                                <span class="d-block small font-weight-bold"></span>
-                                <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: 149.000&nbsp;₫</span>
-                            </p>
-                            <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000&nbsp;₫</span>
-                        </div>
-                        <div class="number-input d-inline-flex rounded">
-                            <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                            <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
-                            <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                        <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
-                    </div>
-                    <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix variantId-107863246">
-                        <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute">
-                        <div class="col-12 d-flex p-0">
-                            <p class="item-title clearfix mb-2">
-                                <a href="../sanpham_html/sazabi.html" title="Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn ( THE WITCH FROM MERCURY) Tặng Base" class="font-weight-bold">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
-                                <span class="d-block small font-weight-bold"></span>
-                                <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: 149.000&nbsp;₫</span>
-                            </p>
-                            <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000&nbsp;₫</span>
-                        </div>
-                        <div class="number-input d-inline-flex rounded">
-                            <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                            <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
-                            <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                        <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
-                    </div>
-                    <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix variantId-107863246">
-                        <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute">
-                        <div class="col-12 d-flex p-0">
-                            <p class="item-title clearfix mb-2">
-                                <a href="../sanpham_html/sazabi.html" title="Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn ( THE WITCH FROM MERCURY) Tặng Base" class="font-weight-bold">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
-                                <span class="d-block small font-weight-bold"></span>
-                                <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: 149.000&nbsp;₫</span>
-                            </p>
-                            <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000&nbsp;₫</span>
-                        </div>
-                        <div class="number-input d-inline-flex rounded">
-                            <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                            <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
-                            <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                        <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
-                    </div>
-                    <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix variantId-107863246">
-                        <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute">
-                        <div class="col-12 d-flex p-0">
-                            <p class="item-title clearfix mb-2">
-                                <a href="../sanpham_html/sazabi.html" title="Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn ( THE WITCH FROM MERCURY) Tặng Base" class="font-weight-bold">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
-                                <span class="d-block small font-weight-bold"></span>
-                                <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: 149.000&nbsp;₫</span>
-                            </p>
-                            <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000&nbsp;₫</span>
-                        </div>
-                        <div class="number-input d-inline-flex rounded">
-                            <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                            <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
-                            <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                        <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
+                        <a href="#"><button type="button" class="rounded" id="pay">THANH TOÁN</button></a>
                     </div>
                 </div>
-                <div class="money_total col-md-4">
-                    <div class="money mb-4 p-3 d-flex align-items-center flex-wrap justify-content-between rounded">
-                        <p class="m-0 text-white">TỔNG</p>
-                        <p class="m-0 text-white" id="money_sum">900.000 Đ</p>
-                    </div>
-                    <a href="#"><button type="button" class="rounded" id="pay">THANH TOÁN</button></a>
+            </div>
+            <div class="footer row mt-5">
+                <div class="footer_part col">
+                    <h4>ĐIỀU KHOẢN & CHÍNH SÁCH</h4>
+                    <ul>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách tích lũy điểm</a></li>
+                        <li><a href="#">Điều khoản điều kiện</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part col">
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách bảo hành đổi trả hàng hóa</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part contact_inform col">
+                    <h4>LIÊN HỆ</h4>
+                    <ul>
+                        <li>Email : <span>hotro@mecha.com.vn</span></li>
+                        <li>Hotline : <span>1900 1912</span></li>
+                        <li>Giờ làm việc : <span>0:00 - 24 : 00</span></li>
+                    </ul>
+                </div>
+                <div class="footer_part col">
+                    <h4>NHẬN THÔNG TIN KHUYẾN MÃI</h4>
+                    <input type="email" class="form-control" placeholder="Email của bạn">
+                    <button class="btn" type="button">Nhận thông tin</button>
                 </div>
             </div>
         </div>
-        <div class="footer row mt-5">
-            <div class="footer_part col">
-                <h4>ĐIỀU KHOẢN & CHÍNH SÁCH</h4>
-                <ul>
-                    <li><a href="#">Chính sách giao hàng</a></li>
-                    <li><a href="#">Chính sách tích lũy điểm</a></li>
-                    <li><a href="#">Điều khoản điều kiện</a></li>
-                </ul>
+        <div class="mobile">
+            <nav class=".navbar navbar-expand-lg">
+                <div class="header row">
+                    <div class="img_home col-3 navbar-brand">
+                        <a href="../html/home.html">
+                            <img src="../assets/img/Logo/MECHA.png" alt="#">
+                        </a>
+                    </div>
+                    <div class="button_container col-5 row">
+                        <a href="../html/login_signup.html" class="col" id="user">
+                            <div class="button_block">
+                                <i class="fa-solid fa-image-portrait fa-lg" style="color: #74a607;"></i>
+                                <p class="collapse">Đăng nhập</p>
+                            </div>
+                        </a>
+                        <a href="../html/cart.html" class="col">
+                            <div class="button_block">
+                                <i class="fa-solid fa-cart-shopping fa-lg"  style="color: #74a607;"></i>
+                                <p class="collapse">Giỏ hàng</p>
+                            </div>
+                        </a>
+                        <button class="navbar-toggler col button" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-lg" style="color: #74a607;"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown " >
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#filmDropdown" aria-expanded="false">Phim</a>
+                            <ul class="dropdown-menu" id="filmDropdown">
+                                <li><a class="dropdown-item" href="../html/danhmuc_gundam.html">Gundam</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_transformer.html">Transformer</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_pacificrim.html">Pacific Rim</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_warhammer.html">Warhammer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown nav-item" >
+                            <a href="#" class="dropdown-toggle" data-bs-target="#sexDropdown" data-bs-toggle="dropdown" aria-expanded="false">Giới tính</a>
+                            <ul class="dropdown-menu " id="sexDropdown">
+                                <li><a class="dropdown-item" href="../html/danhmuc_nam.html">Nam</a></li>
+                                <li><a class="dropdown-item" href="../html/danhmuc_nu.html">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../html/danhmuc_lego.html">Lego</a></li>
+                        <li><a href="../html/danhmuc_mohinh.html">Mô hình</a></li>
+                        <li><a href="../html/danhmuc_gundam.html">Gundam</a></li>
+                        <li><a href="../html/aboutus.html">About us</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="body mt-4">
+                <div class="position_page mb-3"><a href="../html/home.html">Trang chủ</a><span>/</span><a href="#">Giỏ hàng</a></div>
+                <div class="product_pay row rounded pl-lg-3 pr-lg-3 pl-2 pr-2 pt-2 pb-2 pt-lg-3 pb-lg-3" style="min-height:350px">
+                    <div class="product_list col-md-8">
+                        <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix" id="base_product">
+                            <img src="../assets/img/Product/Gundam/Sazabi/4.jpg" class="position-absolute img_product">
+                            <div class="col-12 d-flex p-0">
+                                <p class="item-title clearfix mb-2">
+                                    <a href="#" class="font-weight-bold title">Mô Hình Lắp Ráp HG 1/144 Gundam Calibarn</a>
+                                    <span class="d-block small font-weight-bold"></span>
+                                    <span class="price ml-auto text-left clearfix d-block" style="font-size:14px;">Giá: <span class="small_price">149.000</span></span>
+                                </p>
+                                <span class="variantTotalPrice price font-weight-bold ml-auto text-right clearfix">149.000</span>
+                            </div>
+                            <div class="number-input d-inline-flex rounded">
+                                <button class="border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) && qtypro > 1 ) result.value--;return false;" type="button">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                                <input type="number" name="quantity" value="1" min="1" class="form-control rounded border" id="qtym">
+                                <button class=" border rounded bg-white justify-content-center align-items-center d-flex" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"  type="button">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-outline-danger remove ml-auto remove-item-cart" title="Xóa sản phẩm" data-id="107863246">Xoá</button>
+                        </div>
+                    </div>
+                    <div class="money_total col-md-4">
+                        <div class="money mb-4 p-3 d-flex align-items-center flex-wrap justify-content-between rounded">
+                            <p class="m-0 text-white">TỔNG</p>
+                            <p class="m-0 text-white" id="money_sum"></p>
+                        </div>
+                        <a href="#"><button type="button" class="rounded" id="pay">THANH TOÁN</button></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer_part col">
-                <h4>HỖ TRỢ KHÁCH HÀNG</h4>
-                <ul>
-                    <li><a href="#">Chính sách bảo mật</a></li>
-                    <li><a href="#">Chính sách bảo hành đổi trả hàng hóa</a></li>
-                    <li><a href="#">Chính sách thanh toán</a></li>
-                    <li><a href="#">Những câu hỏi thường gặp</a></li>
-                </ul>
-            </div>
-            <div class="footer_part contact_inform col">
-                <h4>LIÊN HỆ</h4>
-                <ul>
-                    <li>Email : <span>hotro@mecha.com.vn</span></li>
-                    <li>Hotline : <span>1900 1912</span></li>
-                    <li>Giờ làm việc : <span>0:00 - 24 : 00</span></li>
-                </ul>
-            </div>
-            <div class="footer_part col">
-                <h4>NHẬN THÔNG TIN KHUYẾN MÃI</h4>
-                <input type="email" class="form-control" placeholder="Email của bạn">
-                <button class="btn" type="button">Nhận thông tin</button>
+            <div class="footer mt-5">
+                <div class="footer_part">
+                    <h4>NHẬN THÔNG TIN KHUYẾN MÃI</h4>
+                    <input type="email" class="form-control" placeholder="Email của bạn">
+                    <button class="btn" type="button">Nhận thông tin</button>
+                </div>
+                <div class="footer_part mt-4">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#rules">ĐIỀU KHOẢN & CHÍNH SÁCH</h4>
+                    <ul class="collapse" id="rules">
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách tích lũy điểm</a></li>
+                        <li><a href="#">Điều khoản điều kiện</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#support">HỖ TRỢ KHÁCH HÀNG</h4>
+                    <ul class="collapse" id="support">
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách bảo hành đổi trả hàng hóa</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer_part contact_inform">
+                    <h4>LIÊN HỆ</h4>
+                    <ul>
+                        <li>Email : <span>hotro@mecha.com.vn</span></li>
+                        <li>Hotline : <span>1900 1912</span></li>
+                        <li>Giờ làm việc : <span>0:00 - 24 : 00</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -316,6 +350,86 @@
             const line = document.querySelector('.home');
             line.style.background = change;
         }
+    </script>
+    <script>
+        $(document).ready(function(){
+            let count = 0;
+            const regex = /product\d+/; 
+
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (regex.test(key)) {
+                    count++;
+                }
+            }
+
+            for(let i=1;i<=count;i++){
+                
+                var clonedDiv = $('#base_product').clone();
+
+                let inform = JSON.parse(localStorage.getItem("product"+i));
+                if(inform){
+                    clonedDiv.find('.img_product').attr('src', inform.img);
+
+                    clonedDiv.find('.title').text(inform.name);
+
+                    clonedDiv.find('.small_price').text(inform.price);
+
+                    clonedDiv.find('.variantTotalPrice').text(inform.price);
+
+
+                    $('.product_list').append(clonedDiv);
+                }else{
+                    count++;
+                }
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            let total_Price = 0;
+            $('.product').each(function() {
+                var price = $(this).find('.variantTotalPrice').text();
+                var priceText = price.replace(/Đ/g, '').trim();
+                var num_price = priceText.replace(/\./g, '');
+                const end_price = Number(num_price);
+                total_Price = total_Price + end_price;
+            });
+            total_Price = total_Price - 149000*2;
+            total_Price = total_Price/2;
+            var changeToString = total_Price.toLocaleString('en-US');
+            $('#money_sum').text(changeToString.replace(/,/g, '.'));
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.remove-item-cart').click(function(){
+                var $button = $(this);
+                var $productDiv = $button.closest('.product'); 
+                var productName = $productDiv.find('.title').text();
+                console.log(productName);
+                let count = 0;
+                const regex = /product\d+/; 
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    if (regex.test(key)) {
+                        count++;
+                    }
+                }
+                for(let i=1;i<=count; i++){
+                    let product_delete = JSON.parse(localStorage.getItem("product"+i));
+                    if(product_delete){
+                        if(productName.match(product_delete.name)){
+                            localStorage.removeItem("product"+i);
+                            location.reload();
+                        }
+                    }else{
+                        count++;
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
